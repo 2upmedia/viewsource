@@ -10,7 +10,7 @@ services:
   web:
     image: nginx
     volumes:
-      - ./front-end:/usr/share/nginx/html
+      - ./front-end/public:/usr/share/nginx/html
     expose:
       - "80"
     environment:

@@ -1,5 +1,17 @@
 docker-compose.override.yml
 
+# always ignore
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
 # api
 api/viewsource/localconfig.py
 api/vendor
@@ -10,3 +22,4 @@ front-end/bower_components
 front-end/node_modules
 front-end/npm-debug.log
 front-end/css
+front-end/public

@@ -2,24 +2,33 @@
   "name": "viewsource",
   "description": "View prettified source code for any valid Javascript, CSS, JSON, or HTML URL",
   "author": "Jorge Colon",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/2upmedia/viewsource"
   },
   "license": "UNLICENSED",
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-load-plugins": "^1.1.0",
-    "gulp-sass": "^2.1.0"
-  },
   "scripts": {
-    "start": "gulp",
-    "build": "gulp sass"
+    "start": "brunch watch --server",
+    "prod": "brunch build --production",
+    "postinstall": "npm start"
   },
-  "private": true,
   "dependencies": {
-    "gulp-autoprefixer": "^3.1.0"
+    "foundation-sites": "^6.2.3",
+    "highlight.js": "^9.5.0",
+    "motion-ui": "^1.2.2",
+    "vue": "^1.0.26",
+    "vue-resource": "^0.9.3"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2.0.0",
+    "babel-brunch": "~6.0.0",
+    "babel-preset-es2015": "~6.3.13",
+    "brunch": "^2.4.0",
+    "clean-css-brunch": "^2.0.0",
+    "css-brunch": "^2.0.0",
+    "javascript-brunch": "^2.0.0",
+    "sass-brunch": "^2.6.3",
+    "uglify-js-brunch": "^2.0.0"
   }
 }
