@@ -9,8 +9,10 @@ Sample of a full stack app running on Flask with Python 3.5, nginx as a reverse 
 
 # Installation
 
-* Copy docker-compose.override.sample.yml to docker-compose.override.yml
+* Copy `docker-compose.override.sample.yml` to `docker-compose.override.yml`
+* Copy `api/viewsource/localconfig.sample.py` to `api/viewsource/localconfig.py`
 * Add `viewsourceit.local` and `api.viewsourceit.local` host to `/etc/hosts` pointing to wherever port 80 to your docker host is (most-likely 127.0.0.1)
+* Run `npm install` in `front-end`
 * Run `docker-compose up`
 
 # License
