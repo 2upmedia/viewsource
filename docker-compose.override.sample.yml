@@ -1,0 +1,7 @@
+version: '2'
+services:
+  api:
+    volumes:
+      - ./api:/code
+      - ./api/vendor/lib/python3.5/site-packages:/root/.local/lib/python3.5/site-packages/
+    command: python /code/runserver.py

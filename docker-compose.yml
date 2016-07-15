@@ -1,0 +1,35 @@
+version: '2'
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
+  web:
+    image: nginx
+    volumes:
+      - ./front-end:/usr/share/nginx/html
+    expose:
+      - "80"
+    environment:
+      - VIRTUAL_HOST=viewsourceit.local,*.ngrok.io
+
+  vendors:
+    image: python:3.5
+    working_dir: /mnt
+    volumes:
+      - ./api:/mnt
+    environment:
+      PYTHONUSERBASE: /mnt/vendor
+    command: pip install -r requirements.txt --user --upgrade
+
+  api:
+    build: ./api
+    working_dir: /code
+    expose:
+      - "5000"
+    command: /code/start.sh
+    environment:
+      - VIRTUAL_HOST=api.viewsourceit.local

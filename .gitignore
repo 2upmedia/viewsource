@@ -1,0 +1,12 @@
+docker-compose.override.yml
+
+# api
+api/viewsource/localconfig.py
+api/vendor
+**/__pycache__/**
+
+# front-end
+front-end/bower_components
+front-end/node_modules
+front-end/npm-debug.log
+front-end/css

@@ -1,0 +1,40 @@
+.hljs {
+  -webkit-overflow-scrolling: touch;
+}
+
+.wrap-code {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  hyphens: auto;
+  overflow-x: hidden;
+}
+
+.button-wrap-options {
+  &.button-group .button {
+    margin-right: 0;
+    border-right-width: 0;
+  }
+
+  &.button-group .button:last-child {
+    border-right-width: 2px;
+  }
+
+  .button {
+    background-color: unset;
+    color: $button-background;
+    border: 2px solid $button-background;
+  }
+
+  .button_active {
+    background-color: $button-background;
+    color: $button-color;
+  }
+}

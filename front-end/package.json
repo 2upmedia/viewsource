@@ -1,0 +1,25 @@
+{
+  "name": "viewsource",
+  "description": "View prettified source code for any valid Javascript, CSS, JSON, or HTML URL",
+  "author": "Jorge Colon",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/2upmedia/viewsource"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-sass": "^2.1.0"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp sass"
+  },
+  "private": true,
+  "dependencies": {
+    "gulp-autoprefixer": "^3.1.0"
+  }
+}
